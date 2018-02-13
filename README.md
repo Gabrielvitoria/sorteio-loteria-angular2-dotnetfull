@@ -26,6 +26,10 @@ Front-End gerado com [Angular CLI](https://github.com/angular/angular-cli) versi
 5. Nor terminal execute: ```npm install```
 6. Rode o servidor  `ng serve` com npm start. Navegue para `http://localhost:4200/`. A APlicação atualiza automaticamente as alterações feitas nos arquivos.
 
+7. para ajustar a porta da api alterar o endereço no arquivo environment.prod.ts 
+>...\sorteio-loteria-angular2-dotnetfull\SorteFront\src\environments\environment.prod.ts
+
+
 Para obter ajuda com o Angular CLI utilize `ng help` ou acesse a pagina do git [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 ### O que está incluido no Front-End
 Projeto está estrutura da seguinte forma:
