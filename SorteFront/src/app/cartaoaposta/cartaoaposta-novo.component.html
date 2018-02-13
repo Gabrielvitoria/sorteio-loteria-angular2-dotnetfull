@@ -1,0 +1,65 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header" data-background-color="">
+                        <h4 class="title">Novo cartão de Aposta</h4>
+                        <p class="category">Crie sua aposta e boa sorte!</p>
+                    </div>
+                    <div class="card-content" id="cartaoApostaManual">
+                        <form (ngSubmit)="onSubmit()" #apostaForm="ngForm" novalidate>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group form-black label-floating is-empty">
+                                        <label class="control-label">Nome completo</label>
+                                        <input type="text"  [(ngModel)]="cartaoaposta.NomeApostador" name="cartaoaposta.NomeApostador" class="form-control" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12" >
+                                    <div class="">
+                                        <div class="radio" >
+                                            <label> <input (click)="onSelecionaTipoCartao($event)" type="radio" name="tipocartao" id="tipocartao" value="mega"/>6 NÚMEROS </label>
+                                            <label> <input (click)="onSelecionaTipoCartao($event)" type="radio" name="tipocartao" id="tipocartao" value="super"/>SURPRESINHA (AUTOMÁTICO) </label>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-6" *ngIf="tipoCartaoApostaMega">
+                                    <div class="card">
+                                        <div class="card-content">
+
+                                            <div *ngFor="let numero of numeros" class="row">
+                                                <ul class="nav">
+                                                    <li style="float:left; width:10% !important"  class="item item-checkbox" *ngFor="let subDivisaoNumeros of numero">
+                                                        <div class="checkbox">
+                                                            <label>
+                                                                <input type="checkbox" name="{{subDivisaoNumeros.val}}" (click)="selecionarNumero($event, subDivisaoNumeros.val)"/>{{subDivisaoNumeros.val}}
+                                                            </label>
+                                                        </div>
+
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
+                            <button  *ngIf="tipoCartaoApostaMega" type="submit" class="btn btn-success pull-left"  [disabled]="numerosSelecionados.length < 6">Confirmar {{numerosSelecionados.length}} selecionados </button>
+                            <button  *ngIf="tipoCartaoApostaSuper" type="submit" class="btn btn-success pull-left"  >Confirmar Surpresinha (Automática) </button>
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
