@@ -1,6 +1,5 @@
-##  sorteio-loteria-dotnetcore-angular
+##  sorteio-loteria-dotnet-angular
 Projeto para simular sorteio de cartões de loteria em .NET e Angular.
-
 
 #Lib's
 - FluentValidator e Notifiable para validações e mensagens;
