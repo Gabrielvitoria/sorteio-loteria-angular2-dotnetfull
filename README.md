@@ -1,20 +1,24 @@
 ##  sorteio-loteria-dotnetcore-angular
-Projeto para simular sorteio de cartões de loteria em .NET Core 2.0 e Angular.
+Projeto para simular sorteio de cartões de loteria em .NET e Angular.
 
 
 #Lib's
 - FluentValidator e Notifiable para validações e mensagens;
 - LiteDB embarcado (Certifique que na raiz do disco exista a pasta c:\temp)
 
-## FRONT-END
+## BACK-END
+- DDD
+- Domain notifications
+- LiteBd Embarcado para demonstração
 
+
+## FRONT-END
 - Baseado no projeto Material Dashboard Angular creative-tim
-> [Download from Creative Tim](http://www.creative-tim.com/product/material-dashboard-angular2).
+- [Download from Creative Tim](http://www.creative-tim.com/product/material-dashboard-angular2).
+- 
 
 ## Terminal Commands
-
 Front-End gerado com [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0 and angular 4.x.
-
 1. Instale NodeJs em [NodeJs Official Page](https://nodejs.org/en).
 2. Abra terminal
 3. Navegue até a pasta do projeto de FRONT-END
@@ -23,7 +27,6 @@ Front-End gerado com [Angular CLI](https://github.com/angular/angular-cli) versi
 6. Rode o servidor  `ng serve` com npm start. Navegue para `http://localhost:4200/`. A APlicação atualiza automaticamente as alterações feitas nos arquivos.
 
 Para obter ajuda com o Angular CLI utilize `ng help` ou acesse a pagina do git [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
 ### O que está incluido no Front-End
 Projeto está estrutura da seguinte forma:
 
